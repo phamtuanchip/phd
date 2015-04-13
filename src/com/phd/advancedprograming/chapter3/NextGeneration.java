@@ -48,6 +48,24 @@ public class NextGeneration {
 	    
 	  }
   
+  public static void init3 (){
+	  System.out.print("\n Nhap n: ");
+	    Scanner s = new Scanner(System.in);
+	    n = s.nextInt();
+	     for (int i=1; i<=n; i++)
+	         X[i] =i;
+	     OK = 1;
+	}
+	public static void result3(){
+	     
+	     for (int i=1; i<=n; i++) {
+	    	 System.out.print(X[i]);
+	         if(i % n == 0) System.out.print(" ");
+	     }
+	      
+	}
+
+  
   public static void next_bit_string(){
     int i = n ;
     while(i> 0 && X[i]!= 0) {
@@ -100,6 +118,12 @@ public class NextGeneration {
     while(OK == 1){
         result2();
         next_combination();
+      }
+    
+    init3();
+    while(OK == 1){
+        result3();
+        next_permutation();
       }
     
   
